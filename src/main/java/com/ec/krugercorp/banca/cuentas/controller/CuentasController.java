@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/cuenta")
 @CrossOrigin(origins = "{*}")
@@ -17,11 +19,20 @@ public class CuentasController {
 
     @Autowired
     private CuentaService cuentaService;
+
     @ApiOperation(value = "Crear la cuenta del cliente")
     @PostMapping(value = "/crear")
     public String createAccount(@RequestBody Cuenta cuenta) {
        cuentaService.guardar(cuenta);
        return "Cuenta creada exitosamente";
     }
+
+
+    @GetMapping(value = "/")
+    @ApiOperation(value="Listar todas las cuentas y movimientos")
+    public List<Cuenta> listarCuentas(){
+        return cuentaService.findAll();
+    }
+
 
 }
