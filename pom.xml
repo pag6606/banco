@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ec.krugercorp.banca</groupId>
 	<artifactId>cuentas</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>cuentas</name>
 	<description>Demo project for Spring Boot</description>
 
