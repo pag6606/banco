@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cuenta")
 @CrossOrigin(origins = "{*}")
-@Api(value = "Creación de cuentas", description = "Servicio para crear cuentas")
+@Api(value = "Creación de cuentas de demostracion", description = "Servicio para crear cuentas")
 public class CuentasController {
 
     @Autowired
